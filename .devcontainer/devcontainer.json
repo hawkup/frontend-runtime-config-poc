@@ -1,14 +1,12 @@
 {
 	"name": "frontend runtime config poc",
-	"build": {
-		"dockerfile": "Dockerfile"
-  },
+	"dockerFile": "Dockerfile",
 
-	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		"terminal.integrated.shell.linux": "/bin/zsh"
-  },
-  
-  "runArgs": ["--init"],
-  "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ]
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	"forwardPorts": [8080, 8081],
+	"runArgs": ["--init"],
+	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ]
 }
