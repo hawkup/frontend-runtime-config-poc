@@ -1,0 +1,14 @@
+version: "3"
+services:
+  nuxt2:
+    build:
+      context: ./nuxt2
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+  vue2:
+    build:
+      context: ./vue2
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
