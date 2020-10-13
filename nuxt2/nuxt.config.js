@@ -42,6 +42,11 @@ export default {
   build: {
   },
 
-  publicRuntimeConfig: {},
-  privateRuntimeConfig: {}
+  publicRuntimeConfig: {
+    title: process.env.TITLE || 'TITLE',
+    projectName: process.env.PROJECT_NAME || 'PROJECT_NAME'
+  },
+  privateRuntimeConfig: {
+    title: process.env.TITLE_SERVER_SIDE || 'TITLE_SERVER_SIDE'
+  }
 }

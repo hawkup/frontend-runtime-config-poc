@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        nuxt2
+        {{ title }} {{ projectName }}
       </h1>
       <div class="links">
         <a
@@ -28,7 +28,16 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    title: function() {
+      return this.$config.title
+    },
+    projectName: function() {
+      return this.$config.projectName
+    }
+  }
+}
 </script>
 
 <style>

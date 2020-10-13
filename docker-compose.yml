@@ -6,9 +6,15 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:80"
+    environment:
+      TITLE: "This is a title"
+      TITLE_SERVER_SIDE: "This is a title server side"
+      PROJECT_NAME: "Frontend Runtime config POC"
   vue2:
     build:
       context: ./vue2
       dockerfile: Dockerfile
     ports:
       - "8081:80"
+    environment:
+      TITLE: "This is a title"
